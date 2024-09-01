@@ -73,7 +73,6 @@
             </div>
         </div>
     </div>
-    <script src="./index.js"></script>
     <script>
         validator({
             form: ".form",
@@ -82,7 +81,7 @@
                 validator.minLength('#password'),
             ]
         })
-        function validator(options) {
+    function validator(options) {
     var formElement = document.querySelector(options.form)
     if (formElement) {
         document.querySelector('.btn-primary').addEventListener('click', function (e) {
@@ -142,7 +141,7 @@ function createCourse(data) {
         console.log(data)
     })
 }
-start()
+    start()
     </script>
 </body>
 </html>
