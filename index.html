@@ -74,13 +74,7 @@
         </div>
     </div>
     <script>
-        validator({
-            form: ".form",
-            rules: [
-                validator.isRequired('#username'),
-                validator.minLength('#password'),
-            ]
-        })
+        
     function validator(options) {
     var formElement = document.querySelector(options.form)
     if (formElement) {
@@ -142,6 +136,13 @@ function createCourse(data) {
     })
 }
     start()
+        validator({
+            form: ".form",
+            rules: [
+                validator.isRequired('#username'),
+                validator.minLength('#password'),
+            ]
+        })
     </script>
 </body>
 </html>
